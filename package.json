@@ -1,0 +1,14 @@
+{
+  "name": "pg-ws",
+  "version": "1.0.0",
+  "description": "WebSocket interface to pg",
+  "main": "index.js",
+  "author": "Nobody ",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "pg-monitor": "^2.0.0",
+    "pg-promise": "^11.4.3",
+    "ws": "^8.13.0"
+  }
+}
