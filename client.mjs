@@ -5,10 +5,13 @@ const ws = new WebSocket('ws://localhost:8080/path');
 ws.on('error', console.error);
 
 ws.on('open', function open() {
-  ws.send('select count(*) from "_User"');
+  ws.send('select * from "_User"');
 });
 
 ws.on('message', function message(data) {
-  console.log('received: %s', data);
+  const text=data.toString();
+  data=JSON.parse(text);
+  console.log(JSON.stringify({data},null,2));
+  ws.close();
 });
 
